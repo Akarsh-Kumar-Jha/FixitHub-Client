@@ -1,4 +1,6 @@
+"use client";
 import { Button } from '@/components/ui/button'
+import { motion } from 'framer-motion'
 import React from 'react'
 
 function Hero() {
@@ -10,9 +12,9 @@ function Hero() {
    <p className='text-lg text-center text-foreground/80'>FixitHub helps teams track issues, collaborate clearly, and move faster — without unnecessary complexity.</p>
         </div>
 
-        <div className='flex relative w-full h-[70%] justify-center items-center bg-[url(https://res.cloudinary.com/dlnzbkyit/image/upload/v1769612013/ChatGPT_Image_Jan_28_2026_08_13_06_PM_xfuhpl.png)] bg-center bg-contain bg-no-repeat'>
+        <motion.div initial={{scale: 0}} animate={{scale: 1}} transition={{duration:0.5, ease: 'easeInOut'}} className='flex relative w-full h-[70%] justify-center items-center bg-[url(https://res.cloudinary.com/dlnzbkyit/image/upload/v1769612013/ChatGPT_Image_Jan_28_2026_08_13_06_PM_xfuhpl.png)] bg-center bg-contain bg-no-repeat'>
 
-</div>
+</motion.div>
 
 <Button>Get Started</Button>
     </div>

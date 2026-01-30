@@ -1,6 +1,8 @@
+"use client";
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import {motion} from 'framer-motion'
 
 const navLinks = [
   { name: "Home", href: "#" },
@@ -10,7 +12,7 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <header className="mx-auto mt-6 max-w-7xl rounded-2xl border bg-card sticky top-6 z-99 backdrop-blur-2xl">
+    <motion.header initial={{y: -100}} animate={{y: 0}} transition={{duration:0.5,ease:"easeInOut"}} className="mx-auto mt-6 max-w-7xl rounded-2xl border bg-card sticky top-6 z-99 backdrop-blur-2xl">
       <nav className="flex h-16 items-center justify-between px-6">
         
         {/* Logo */}
@@ -41,6 +43,6 @@ export default function Navbar() {
         </Button>
 
       </nav>
-    </header>
+    </motion.header>
   )
 }
