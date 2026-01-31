@@ -32,7 +32,7 @@ const parent:Variants = {
     hidden:{},
     show:{
         transition:{
-            staggerChildren:0.2,
+            staggerChildren:0.3,
             ease:'easeInOut'
         }
     }
@@ -42,14 +42,14 @@ const parent:Variants = {
 const item:Variants = {
     hidden:{
         opacity:0,
-        y:100
+        y:20
     },
     show:{
         opacity:1,
         y:0,
         transition:{
             duration:0.5,
-            ease:'easeOut'
+            ease:'easeInOut'
         }
     }
 }
@@ -67,7 +67,7 @@ export default function FeaturesSection() {
             <motion.div
               variants={item}
               key={feature.title}
-              className="rounded-xl hover:bg-card/70 transition-all duration-200 h-55 w-125 border-border bg-card p-6"
+              className="rounded-xl flex flex-col justify-center items-center hover:bg-card/70 transition-all duration-200 h-55 w-125 border-border bg-card p-6"
             >
                 
               <h3 className="text-3xl text-center font-bold text-primary">
